@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //array
+        const hewan = ["Ayam","Harimau","Merpati","Kuda"]
+
+        const [hewan1,hewan2,...hewanlainnya] = hewan;
+        console.log(hewan1,hewan2,hewanlainnya);
+
+        //Object Destructuring
+        const Komik = {
+            judul: "Solo leveling",
+            chapter: "130",
+            season: "2",
+            author:{
+                pengarang:"Chu-Gong",
+                ilustrasi:"Dubu"
+            }
+        }
+
+        const {judul,chapter,author:{pengarang,ilustrasi}} = Komik;
+        console.log(Komik);
+
+        //function paramater
+        const manhwa =({judul,chapter,author}) => {
+            console.log(judul,chapter,author);
+        }
+
+        manhwa(Komik);
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
