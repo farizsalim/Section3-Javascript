@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //conditional Variable
+        const nilai = 80;
+
+        const keterangan1 = nilai < 85 && "B"
+        console.log(keterangan1);
+
+        const keterangan2 = nilai > 90 || "A"
+        console.log(keterangan2);
+
+        const keterangan3 = nilai < 85 ? "B": nilai < 75? "C": nilai < 65? "D": nilai < 55 ? "E atau Tidak lulus": "A"
+        console.log(keterangan3);
+
+        //Map and Filter
+        const siswa = [
+            {
+                nama:"Udin",
+                ujian: 73
+            },
+            {
+                nama:"Ivan",
+                ujian: 82
+            },
+            {
+                nama:"Agus",
+                ujian: 96
+            },
+            {
+                nama:"Dian",
+                ujian: 93
+            },
+            {
+                nama:"Fitri",
+                ujian: 84
+            },
+            {
+                nama:"Ronie",
+                ujian: 79
+            },
+        ];
+
+        const listNilai = siswa.map((Nilai) => Nilai.ujian)
+        console.log(listNilai);
+
+        const listNilaiA = siswa.filter((Nilai) => Nilai.ujian > 85)
+        console.log(listNilaiA);
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
